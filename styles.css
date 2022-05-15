@@ -10,4 +10,84 @@ htm, body {
     width: 400px;
     background: #B50600;
     border-radius: 50%;
+    border: 15px solid black;
+    display: flex;
+    position: relative;
+}
+
+.nested_eye {
+    position: absolute;
+    height: 280px;
+    width: 280px;
+    background: #B50600;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:50%;
+    border: 5px solid rgba(0, 0, 0, 0.3); 
+    animation: rotate-anim 1.5s linear infinite;
+    /* opacity: 0.3; */
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.side {
+    height: 20px;
+    width: 18px;
+    background: black;
+    position: absolute;
+    left: 4px;
+    top: -10px;
+    border-radius: 0% 145% 0 90%;
+    transform: rotateZ(60deg);
+}
+
+.dot_1 {
+    top: 0px;
+    left: -10px;
+    transform: translate(50%, 50%);
+}
+
+.dot_2 {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -100%) rotateZ(90deg);
+}
+
+.dot_3 {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(180deg);
+}
+
+.center {
+    height: 150px;
+    width: 150px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: 5px 5px  100px black;
+}
+
+@keyframes rotate-anim {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translate( -50%, -50%) rotateZ(340deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
 }
